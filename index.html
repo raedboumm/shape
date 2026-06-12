@@ -11,17 +11,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --charcoal: #4a4a4a;
-      --charcoal-dark: #2b2b2b;
-      --peach: #f4c2a8;
-      --peach-soft: #f8d8c6;
-      --peach-deep: #e29a73;
-      --cream: #fdf8f5;
+      --charcoal: #3f4247;
+      --charcoal-dark: #25272b;
+      --peach: #d9b6a3;       /* muted accent kept from logo */
+      --peach-soft: #e6d4c9;
+      --peach-deep: #b98e74;
+      --slate: #6c7178;
+      --silver: #c9ccd1;
+      --cream: #f4f5f7;
       --white: #ffffff;
-      --ink: #574f4a;
-      --muted: #9a8f88;
-      --shadow: rgba(74, 74, 74, 0.10);
-      --shadow-strong: rgba(120, 80, 55, 0.20);
+      --ink: #4d5157;
+      --muted: #8c9097;
+      --shadow: rgba(40, 44, 50, 0.12);
+      --shadow-strong: rgba(30, 33, 38, 0.26);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -37,9 +39,9 @@
       justify-content: center;
       padding: 32px 18px;
       color: var(--charcoal);
-      background: radial-gradient(1200px 700px at 15% 0%, #fff6f0 0%, transparent 55%),
-                  radial-gradient(900px 600px at 100% 100%, #f6cdb4 0%, transparent 60%),
-                  linear-gradient(135deg, #fdf8f5 0%, #f7e2d6 50%, #f1c2a6 100%);
+      background: radial-gradient(1200px 700px at 15% 0%, #fbfbfc 0%, transparent 55%),
+                  radial-gradient(900px 600px at 100% 100%, #cfd3d8 0%, transparent 60%),
+                  linear-gradient(140deg, #eef0f2 0%, #d8dbdf 50%, #b9bdc3 100%);
       position: relative;
       overflow-x: hidden;
     }
@@ -53,9 +55,9 @@
       z-index: 0;
       pointer-events: none;
     }
-    .blob.one   { width: 380px; height: 380px; background: var(--peach-deep); top: -130px; right: -110px; animation: drift 14s ease-in-out infinite; }
-    .blob.two   { width: 340px; height: 340px; background: #cdb8ac; bottom: -130px; left: -120px; animation: drift 18s ease-in-out infinite reverse; }
-    .blob.three { width: 220px; height: 220px; background: #f7d9c6; top: 40%; left: -90px; animation: drift 16s ease-in-out infinite; }
+    .blob.one   { width: 380px; height: 380px; background: #9aa0a7; top: -130px; right: -110px; animation: drift 14s ease-in-out infinite; }
+    .blob.two   { width: 340px; height: 340px; background: #babfc5; bottom: -130px; left: -120px; animation: drift 18s ease-in-out infinite reverse; }
+    .blob.three { width: 220px; height: 220px; background: var(--peach); top: 40%; left: -90px; opacity: 0.35; animation: drift 16s ease-in-out infinite; }
 
     @keyframes drift {
       0%, 100% { transform: translate(0, 0) scale(1); }
@@ -96,7 +98,7 @@
       justify-content: center;
       background:
         linear-gradient(var(--white), var(--white)) padding-box,
-        conic-gradient(from 0deg, var(--peach), var(--peach-deep), #d9c2b6, var(--peach), var(--peach-deep)) border-box;
+        conic-gradient(from 0deg, var(--silver), var(--slate), #e3e5e8, var(--peach), var(--slate)) border-box;
       border: 4px solid transparent;
       box-shadow: 0 16px 36px var(--shadow-strong);
       animation: float 5.5s ease-in-out infinite;
@@ -106,7 +108,7 @@
       position: absolute;
       inset: -14px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(226,154,115,0.28), transparent 68%);
+      background: radial-gradient(circle, rgba(108,113,120,0.26), transparent 68%);
       z-index: -1;
     }
 
@@ -202,7 +204,7 @@
     .link:focus-visible {
       transform: translateY(-5px);
       box-shadow: 0 18px 34px var(--shadow-strong);
-      border-color: var(--peach-deep);
+      border-color: var(--slate);
       outline: none;
     }
     .link:hover::before,
@@ -226,7 +228,7 @@
 
     .icon.facebook  { background: linear-gradient(135deg, #4f87e8, #1877f2 60%, #0c5fd6); }
     .icon.instagram { background: radial-gradient(circle at 30% 110%, #ffd87a 0%, #fc6a3f 25%, #e1306c 50%, #c13584 70%, #5b51d8 100%); }
-    .icon.maps      { background: linear-gradient(135deg, #f6cbb1, var(--peach-deep)); }
+    .icon.maps      { background: linear-gradient(135deg, #7c8189, var(--charcoal)); }
 
     .link .label {
       display: flex;
@@ -248,14 +250,14 @@
       justify-content: center;
       width: 26px; height: 26px;
       border-radius: 50%;
-      color: var(--peach-deep);
-      background: rgba(242, 200, 178, 0.28);
+      color: var(--slate);
+      background: rgba(108, 113, 120, 0.14);
       transition: transform 0.28s ease, background 0.28s ease, color 0.28s ease;
     }
     .arrow svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
     .link:hover .arrow {
       transform: translateX(4px);
-      background: var(--peach-deep);
+      background: var(--charcoal);
       color: var(--white);
     }
 
@@ -321,7 +323,7 @@
       </a>
     </nav>
 
-    <footer>Fait avec <span class="heart">♥</span> par Shape — Maison du Design</footer>
+    <footer>Fait avec <span class="heart">♥</span></footer>
   </main>
 </body>
 </html>
